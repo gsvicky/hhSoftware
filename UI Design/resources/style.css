@@ -1,0 +1,539 @@
+/***Reset browser margins, padding and borders****/
+html, body, div, h1, h2, h3, h4, h5, h6, p, a, img, ul, li{
+	margin:0;
+	padding:0;
+	border:0;
+}
+/****Render HTML5 elements as block in older browser****/
+header, footer, section, aside, nav, article {
+	display: block;
+}
+
+/*******************
+GENERAL LAYOUT
+********************/
+body{
+	/*give the background a gradient -see http://cssdemos.tupence.co.uk/gradients.htm for more info*/
+	background:#a7cdd9;/*fallback colour for unsuported browsers*/
+	background: -webkit-linear-gradient(top, #4CB3D8, #e6eff3 300px); /*Chrome and Safari*/
+	background: -moz-linear-gradient(top, #4CB3D8, #e6eff3 300px);/*Firefox*/
+	background: -o-linear-gradient(top, #4CB3D8, #e6eff3 300px);/*Opera*/
+	background: -ms-linear-gradient(top, #4CB3D8, #e6eff3 300px);/*proposed for IE10*/
+	-pie-background: linear-gradient(#4CB3D8, #e6eff3 300px);/*IE9 and lower*/
+	behavior: url(assets/pie/PIE.php); /*required to make the gradient work in IE9 and earlier, see http://css3pie.com*/
+
+	/*Basic styling*/
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size:.875em;
+	text-align:center;
+}
+/*CONTAIN THE PAGES IN A FIXED WIDTH DIV*/
+#wrapper{
+	width:960px; /*width allows resolutions of 1024 and above wide not to have a horizontal scroll*/
+	margin:0 auto; /*centers the div*/
+	margin-top:15px;
+	text-align:left;
+	/*rounded corners*/
+	-webkit-border-radius:10px;/*older Chrome and Safari*/
+	-moz-border-radius:10px;/*older Firefox*/
+	border-radius:10px;/*most of the latest browsers*/
+	/*give a div a drop shadow*/
+	/*older Chrome and Safari*/
+	-webkit-box-shadow: rgba(93, 100, 106, .75) 0 2px 10px;
+	/*older Firefox*/
+	-moz-box-shadow: rgba(93, 100, 106, .75) 0 2px 10px;
+	/*most of the latest browsers*/
+	box-shadow: rgba(93, 100, 106, .75) 0 2px 10px;
+}
+
+#content {
+	padding:10px 20px;
+	width:920px;
+}
+div {
+	width:100%;
+	display:table;
+	/* border:1px solid black; */
+}
+
+#pageheading{
+	width:100%;
+}
+#section1{
+	width:100%;
+}
+#section1heading{
+	width:100%;
+}
+#section1content1{
+	width:70%;
+	float:left;
+}
+#section1content2{
+	width:29%;
+	float:right;
+}
+#section2{
+	padding:10px 0px 0px 0px;
+	width=100%; 
+}
+#section2heading{
+	width=100%;
+}
+#section2content1{
+	width=100%;
+}
+#section3{
+	padding:10px 0px 0px 0px;
+	width:100%;
+}
+#section3heading{
+	width:100%;
+}
+#section3content1{
+	width:60%;
+	float:left;
+}
+#section3content2{
+	width:40%;
+	float:right;
+}
+
+/**************
+BASIC TEXT AND LINK STYLING
+***************/
+/*text*/
+p{
+	font-weight:normal;
+	line-height:1.4em;
+	margin-bottom:12px;
+}
+span.timestamp {
+	font-weight:none;
+	font-style:italic;
+	color:#999C9D;
+}
+span.normal {
+	color:#0A6E0B; 
+	font-weight:bold;
+}
+span.warning  {
+	color:#F9A806; 
+	font-weight:bold;
+}
+span.critical  {
+	color:#FB0217; 
+	font-weight:bold;
+}
+span.summaryprefix {
+	font-weight:bold;
+}
+span.summarynormal {
+	color:#0A6E0B; 
+	font-weight:normal;
+}
+span.summarywarning  {
+	color:#F9A806; 
+	font-weight:normal;
+}
+span.summarycritical  {
+	color:#FB0217; 
+	font-weight:normal;
+}
+ul{
+	margin:10px 0 10px 20px;
+}
+li{
+	line-height:1.4em;
+	margin-bottom:5px;
+}
+/*headings*/
+h2, h3, h4, h5{
+	/* font-family:'Happy Monkey', cursive;/*Happy Monkey is available from http://www.google.com/webfonts/specimen/Happy+Monkey*/
+	font-weight:normal;
+	color:#1c52a2;
+}
+h2{
+	font-size:2.1em;
+	line-height:1.5em;
+	margin-bottom:10px;
+	margin-left:-20px;
+	text-shadow:0 1px 3px #8D9499;
+}
+h2.pageheadings{
+	letter-spacing:0px;
+}
+
+h3{
+	font-size:1.5em;
+	margin-left:0px;
+	text-shadow:1px 1px 1px #fff;/* 0px 1px 0px #8D9499; */
+}
+h4{
+	font-size:1.2em;
+	margin:40px 0 10px -10px;
+	text-shadow:1px 1px 1px #fff;
+}
+/* Links */
+a:link{
+	color:#832436;
+}
+a:visited{
+	color:#378a91;
+}
+a:active, a:hover, a:focus{
+	text-decoration:none;
+	color:#306a7a;
+}
+
+/**** MENU ****/
+#menu {
+
+	/*Chrome and Safari*/
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #426d9c), color-stop(40%, #4CB3D8), color-stop(100%, #1384d1));
+	/*Firefox*/
+	background: -moz-linear-gradient(top, #426d9c, #4CB3D8, #1384d1);
+	/*Opera*/
+	background: -o-linear-gradient(top, #426d9c, #4CB3D8, #1384d1);
+	/*proposed for IE10*/
+	background: -ms-linear-gradient(top, #426d9c, #4CB3D8, #1384d1);
+	/*IE9 and lower*/
+	-pie-background: linear-gradient(#426d9c, #4CB3D8, #1384d1);
+	/*required to make the gradient work in IE9 and earlier, see http://css3pie.com*/
+	behavior: url(assets/pie/PIE.php); 
+
+	/*older Chrome and Safari*/
+	-webkit-border-radius: 5px;
+	/*older Firefox*/
+	-moz-border-radius: 5px;
+	/*most of the latest browsers*/
+	border-radius: 5px;
+  
+	line-height: 50px;
+	text-align: center;
+	margin: 0 auto;
+	padding: 0;
+	z-index: 1000
+}
+
+#menu ul {
+	padding: 0;
+}
+
+#menu ul li {
+	list-style-type: none;
+	display: inline;
+	margin-right: 10px;
+}
+
+#menu ul li a {
+	color: #fff;
+	text-decoration: none;
+	padding: 3px 7px;
+	font-size:1.1em;
+  
+	text-shadow: 1px 1px 1px #000;
+
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	border-radius: 5px;
+
+	-webkit-transition-property: color, background;
+	-webkit-transition-duration: 0.5s, 0.5s;
+}
+
+#menu ul li a:hover {
+	background: #01458e;
+	color: #fff;
+
+	-webkit-transition-property: color, background;
+	-webkit-transition-duration: 0.5s, 0.5s;
+}
+
+#menu.default {
+	width: 920px;
+	height: 50px;
+
+	/*older Chrome and Safari*/
+	-webkit-box-shadow: 0 5px 20px #888;
+	/*older Firefox*/
+	-moz-box-shadow: 0 5px 20px #888;
+	/*most of the latest browsers*/
+	box-shadow: 0 5px 20px #888;
+}
+
+#menu.fixed {
+	position: fixed;
+	top: -10px;
+	left: 0;
+	min-width: 920px;
+	width: 100%;
+	height: 60px;
+
+	/*older Chrome and Safari*/
+	-webkit-box-shadow: 0 0 40px #222;
+	/*older Firefox*/
+	-moz-box-shadow: 0 0 40px #222;
+	/*most of the latest browsers*/
+	box-shadow: 0 0 40px #222;
+}
+
+
+/**** HEADER ****/
+header h1{
+	width:960px;/*width of the image being used*/
+	height:200px;/*height of the image*/
+	text-indent:-9999px; /*removes the text off the page*/
+	background:url(header.jpg) no-repeat; /*replace the text with an image*/
+}
+header a#home{/*make logo a link*/
+	display:block;
+	height:200px;/*height of the h1 image above*/
+	background:transparent;
+	border:0;
+}
+
+/**** BREADCRUMBS****/
+nav#breadcrumbs{
+	padding:0 0 2px 4px;
+	background:#dce9ef;
+}
+nav#breadcrumbs p{
+	font-size:.8em;
+	line-height:80%;
+	margin-bottom:0;
+	color:#878787;
+	white-space:pre-wrap; /*keeps the space between words the same as in the HTMl document rather than just one space default*/
+}
+nav#breadcrumbs a{
+	color:#829da5;
+}
+nav#breadcrumbs a:active, nav#breadcrumbs a:hover, nav#breadcrumbs a:focus{
+	text-decoration:none;
+	color:#306a7a;
+}
+
+/****MAIN CONTENT****/
+#content{
+	color:#3d444b;
+}
+
+/*Show help text on hover*/
+ul.helptext{
+	list-style-type: none;
+ }
+ul.helptext li {
+	display:inline-block; /*places the images in a line*/
+	position: relative; /*allows precise positioning of the popup image when used with position:absolute - see support section */
+	z-index: 0; /*resets the stack order of the list items - we'll increase in step 4. */
+ } 
+ ul.helptext a{
+		color:#1c52a2;
+		text-decoration:none;
+ }  
+
+ul.helptext a span{
+	position: absolute;
+	left: -9999px;  /*moves the span off the page, effectively hiding it from view*/
+	/**Style the frame**/
+	text-decoration:none;
+	padding: 5px; /*size of the frame*/
+	background:#E8EBED; /*colour of the frame*/
+	/*add a drop shadow to the frame*/
+	-webkit-box-shadow: 0 0 3px rgba(0,0,0, .75));
+	-moz-box-shadow: 0 0 3px rgba(0,0,0, .75);
+	box-shadow: 0 0 3px rgba(0,0,0, .75);
+	/*give the corners a curve*/
+	-webkit-border-radius: 8px;
+	-moz-border-radius: 8px;
+	border-radius:8px;
+	/**Style the caption**/
+	font-size:.5em;
+	text-align: left;
+	vertical-align:top;
+	text-shadow:none;
+	height: 40px;
+	margin: 0px;
+}
+
+/***We bring the large helptext back onto the page by reducing left from -9999px to figures below***/ 
+ul.helptext li:hover a span{ 
+	position: relative;
+	z-index: 100; /* bring to front */
+	top: -15px; /*the distance from the bottom of the header to the top of the popup*/
+	left: 0px; /*distance from the left of the header to the left of the popup */ 
+}
+
+img.printit{
+	width: 22px; 
+	height: 22px;
+	float: right;
+}
+	/*
+	Pretty Table Styling
+	CSS Tricks also has a nice writeup: http://css-tricks.com/feature-table-design/
+	*/
+	
+	table {
+		border:none;/* 1px solid #d3d3d3; */
+		background:#fefefe;
+		float:left;
+		width:100%;
+		margin:10px 0px;/* top/bottom left/right */
+		border-spacing:0px;
+    border-collapse:collapse;
+		-moz-border-radius:10px; /* FF1+ */
+		-webkit-border-radius:10px; /* Saf3-4 */
+		border-radius:10px;
+		-webkit-box-shadow: rgba(93, 100, 106, .45) 0 0 5px;
+		-moz-box-shadow: rgba(93, 100, 106, .45) 0 0 5px;
+		box-shadow: rgba(93, 100, 106, .45) 0 0 5px;
+	}
+
+	
+	th, td {padding:8px 18px 8px; text-align:center; }
+	
+	th {color:#1c52a2;padding-top:10px; text-shadow: 1px 1px 1px #fff; background:#e8eaeb;}
+	
+	td {border-top:1px solid #e0e0e0; border-right:1px solid #e0e0e0;}
+	
+	tr.odd-row td {background:#f6f6f6;}
+	
+	td.first, th.first {text-align:left}
+	
+	td.last {border-right:none;}
+	
+	/*
+	Background gradients are completely unnecessary but a neat effect.
+	*/
+	
+	td {
+		background: -moz-linear-gradient(100% 25% 90deg, #fefefe, #f9f9f9);
+		background: -webkit-gradient(linear, 0% 0%, 0% 25%, from(#fefefe), to(#f9f9f9));
+	}
+	
+	tr.odd-row td {
+		background: -moz-linear-gradient(100% 25% 90deg, #f6f6f6, #f1f1f1);
+		background: -webkit-gradient(linear, 0% 0%, 0% 25%, from(#f6f6f6), to(#f1f1f1));
+	}
+	
+	th {
+		background: -moz-linear-gradient(100% 20% 90deg, #B6DFF3, #C0E2F2);
+		background: -webkit-gradient(linear, 0% 0%, 0% 20%, from(#B6DFF3), to(#C0E2F2));
+	}
+	
+	/*
+	I know this is annoying, but we need additional styling so webkit will recognize rounded corners on background elements.
+	Nice write up of this issue: http://www.onenaught.com/posts/266/css-inner-elements-breaking-border-radius
+	
+	And, since we've applied the background colors to td/th element because of IE, Gecko browsers also need it.
+	*/
+	
+	tr:first-child th.first {
+		-moz-border-radius-topleft:10px;
+		-webkit-border-top-left-radius:10px; /* Saf3-4 */
+	}
+	
+	tr:first-child th.last {
+		-moz-border-radius-topright:10px;
+		-webkit-border-top-right-radius:10px; /* Saf3-4 */
+	}
+	
+	tr:last-child td.first {
+		-moz-border-radius-bottomleft:10px;
+		-webkit-border-bottom-left-radius:10px; /* Saf3-4 */
+	}
+	
+	tr:last-child td.last {
+		-moz-border-radius-bottomright:10px;
+		-webkit-border-bottom-right-radius:10px; /* Saf3-4 */
+	}
+
+td.critical  {
+	color:#FB0217; 
+	font-weight:bold;
+}
+
+td.highpriority  {
+	color:#F9A806; 
+	font-weight:bold;
+}
+
+/*style the floated box on the right of the page*/
+.cutoutright{
+	float:right;
+	margin:10px 0px;
+	padding:10px;
+	width:90%;
+	background:#dceaf4;
+	/*give the corners of the box a curve*/
+	-webkit-border-radius:10px;
+	-moz-border-radius:10px;
+	border-radius:10px;
+	/*give the box a shadow*/
+	-webkit-box-shadow: rgba(93, 100, 106, .45) 0 0 5px;
+	-moz-box-shadow: rgba(93, 100, 106, .45) 0 0 5px;
+	box-shadow: rgba(93, 100, 106, .45) 0 0 5px;
+}
+.cutoutright p{
+	margin:7px 0;
+}
+.cutoutright h3{
+	margin:0 0 10px 0;
+}
+
+/****FOOTER*****/
+footer{
+	margin: 30px 0 0 0;
+	width: 900px;
+	padding:10px 10px 20px 50px;
+	color:#3d444b;
+	overflow:hidden;
+
+	/*clear the floats*/
+	/* width:auto; */
+	
+	/*give the background a gradient -see http://cssdemos.tupence.co.uk/gradients.htm for more info*/
+	background:#a7cdd9;/*fallback colour for unsupported browsers*/
+	background: -webkit-linear-gradient(top, #e6eff3, #9dd0df 80px); /*Chrome and Safari*/
+	background: -moz-linear-gradient(top, #e6eff3, #9dd0df 80px);/*Firefox*/
+	background: -o-linear-gradient(top, #e6eff3, #9dd0df 80px);/*Opera*/
+	background: -ms-linear-gradient(top, #e6eff3, #9dd0df 80px);/*proposed for IE10*/
+	-pie-background: linear-gradient(#e6eff3, #9dd0df 80px);/*IE9 and earlier*/
+	behavior: url(assets/pie/PIE.php);  /*required to make the gradient work in IE9 and earlier, see http://css3pie.com*/
+}
+footer nav{
+	/* width:900px; */
+	/* float:left; */
+}
+footer ul{
+	list-style-type:none;
+	margin:10px 0;
+}
+footer li{/*by setting a width for each list item and floating it left we can place the 9 links, 3 in a row and in 3 columns*/
+	/* border:0.2px solid black; */
+	display:inline;
+	float:left;
+	width:260px;
+	padding: 5px 10px;
+	font-size:.95em;
+	text-align: center;
+	letter-spacing:1px;
+	line-height:1em;
+	color:#344e66;
+}
+footer a:link, footer a:visited{
+	color:#344e66;
+	text-decoration:none;
+	margin:0 10px;
+	text-shadow: 0px -1px 0px #637485;
+}
+footer a:active, footer a:hover, footer a:focus{
+	color:#832436;
+	text-decoration:none;
+	text-shadow: 0px -1px 0px #551f29;
+}
+
+/* TODO:
+- convert to individual htm files
+*/

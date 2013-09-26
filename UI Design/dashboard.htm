@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="refresh" content="5">
+  	<title>Dashboard</title>
+    <meta name="description" content="Main dashboard that is shown after user logs in" />
+    <meta name="keywords" content="dashboard, adeptize, home health" />
+    <!--STYLESHEETS-->
+    <link rel="stylesheet" href="resources/style.css" type="text/css" media="screen" />
+    <link rel="stylesheet" href="resources/print.css" type="text/css" media="print" />
+
+    <!--GOOGLE WEB FONTS USED IN THIS TEMPLATE - http://www.google.com/webfonts-->
+    <link href='http://fonts.googleapis.com/css?family=Happy+Monkey' rel='stylesheet' type='text/css' />
+  </head>
+  <body>
+    <div id="wrapper">
+      <div id="topspace" class="default">
+			  <p><br></p>
+			</div>
+			<header>
+				<h1>
+          <a id="home" href="/" title="Adeptize">Dashboard</a>
+        </h1>
+      </header>
+			<div id="menu" class="default">
+				<ul>
+					<li><a href="#">Dashboard</a></li>
+					<li><a href="#">Patients</a></li>
+					<li><a href="#">Physicians</a></li>
+					<li><a href="#">Schedule</a></li>
+					<li><a href="#">Billing</a></li>
+					<li><a href="#">Reports</a></li>
+					<li><a href="#">Settings</a></li>
+					<li><a href="#">Help</a></li>
+					<li><a href="#">Feedback</a></li>
+				</ul>
+			</div><!-- close menu -->
+	  
+      <!--BREADCRUMB NAVIGATION to show visitors their location within the site-->
+      <nav id="breadcrumbs">
+        <p>
+          <a href="/">Login</a> &gt; <a href="#">Dashboard</a> 
+				</p>
+      </nav>
+      <!--END BREADCRUMBS-->
+      <!--MAIN CONTENT-->
+      <div id="content">
+				<div id="pageheading">
+					<!--page heading-->
+					<h2 class="pageheadings"> 
+						<ul class="helptext">
+						<li>
+							<a href="#">
+								Dashboard
+								<span>Dashboard shows most current user-specific information.</span>
+							</a>
+						</li>
+						</ul>
+					</h2>
+				</div>
+				<div id="section1">
+					<div id="section1heading">     
+						<h3>My Tasks </h3>
+						<span class="summaryprefix">Summary:</span>,
+						<span class="summarynormal">8 Total</span>,
+						<span class="summarywarning">2 High</span>,
+						<span class="summarycritical">1 Past Due</span>
+					</div>
+
+					<div id="section1content1">     
+						<table id="mytasks">
+							<tr><th>Task</th><th>Due Date</th><th>For</th><th>Type</th></tr>
+							<tr><td><a href="#">485 POC</a></td><td class="critical">Sep 20</td><td>Mary Jones</td><td>Clinical</td></tr>
+							<tr><td><a href="#">OASIS-C Report</a></td><td class="highpriority">Today</td><td>Mary Jones</td><td>Clinical</td></tr>
+							<tr><td><a href="#">485 POC</a></td><td>Tomorrow</td><td>Mary Jones</td><td>Clinical</td></tr>
+							<tr><td><a href="#">Nursing License</a></td><td class="highpriority">Nov 25</td><td>Mary Jones</td><td>Admin</td></tr>
+							<tr><td><a href="#">485 POC</a></td><td>Nov 26</td><td>Mary Jones</td><td>Clinical</td></tr>
+							<tr><td><a href="#">OASIS-C Report</a></td><td>Nov 26</td><td>Mary Jones</td><td>Clinical</td></tr>
+						</table>
+					</div>
+
+					<div id="section1content2">     
+						<!--CUTOUT BOX-->
+						<article class="cutoutright">
+							<h3>My Profile</h3>
+							<p>Paperwork Timeliness: <span class="normal">90%</span> </p>
+							<p>Patient Feedback: <span class="normal">98% </span></p>
+							<p>Office Staff Feedback: <span class="warning">52%</span> </p>
+							<p>Corrections: <span class="critical">75%</span></p>
+						</article>
+					</div>
+				</div>
+
+				<div id="section2">
+					<div id="section2heading">     
+						<h3>My Schedule </h3>
+						<span class="summaryprefix">Summary:</span>
+						<span class="summarynormal">8 This Week</span>,
+						<span class="summarywarning">2 Today</span>
+						<img class="printit" src="resources/print.jpg" alt="Print"> 
+					</div>
+					
+					<div id="section2content1">     
+						<table id="myschedule">
+							<tr><th>Name</th><th>Time</th><th>At</th><th>With</th><th>Contact#</th></tr>
+							<tr><td><a href="#">Patient Visit</a></td><td>Today 3pm - 4pm</td><td><a href="#">3636, Jasmine Ave</a></td><td>Mary Ann</td><td>125-456-6789</td></tr>
+							<tr><td><a href="#">Pharmacy Visit</a></td><td>Today 4pm - 5pm</td><td><a href="#">3606, Glendon Ave</a></td><td>Robert Hiegh</td><td>310-323-3434</td></tr>
+							<tr><td><a href="#">Patient Visit</a></td><td>Tomorrow 9am - 9:30am</td><td><a href="#">1000, Hampton Ave</a></td><td>Tom Bradley</td><td>310-424-4665</td></tr>
+							<tr><td><a href="#">Credential Submission</a></td><td>Nov 25 2pm - 3pm</td><td><a href="#">4933, Vinton Ave</a></td><td>Mathew Hay</td><td>345-567-7535</td></tr>
+							<tr><td><a href="#">Patient Visit</a></td><td>Nov 26 4pm - 5pm</td><td><a href="#">2001, Palms Ave</a></td><td>Victor Gaj</td><td>234-654-5678</td></tr>
+							<tr><td><a href="#">Patient Visit</a></td><td>Nov 26 5pm - 6pm</td><td><a href="#">3606, Glendon Ave</a></td><td>Ram Velu</td><td>345-960-9797</td></tr>
+						</table>
+					</div>
+				</div>
+				
+				<div id="section3">
+					<div id="section3heading">     
+						<h3>Notifications</h3>
+						<span class="summaryprefix">Summary:</span>,
+						<span class="summarynormal">8 Total</span>,
+						<span class="summarywarning">2 Today</span>
+					</div>
+
+					<div id="section3content1">     
+						<table id="notifications">
+							<tr><th>Message</th><th>Date</th><th>Ack</th></tr>
+							<tr><td>All employees are encouraged to review QA procedures</td><td>Today</td><td><input type="checkbox" title="Click to acknowledge"></td></tr>
+							<tr><td>Your certifications are up for renewal</td><td>Today</td><td><input type="checkbox" title="Click to acknowledge"></td></tr>
+							<tr><td>Any announcements or alerts sent globally or to this specific staff</td><td>Apr 29</td><td><input type="checkbox" title="Click to acknowledge"></td></tr>
+							<tr><td>Any auto generated warnings, alerts or error notifications</td><td>Apr 25</td><td><input type="checkbox" title="Click to acknowledge"></td></tr>
+						</table>
+					</div>
+
+					<div id="section3content2">     
+						<article class="cutoutright">
+							<h3>News Feeds</h3>
+							<p><a href="http://www.nahc.org">CMS ordering face to face implementation by 6/9/13 </a><br> <span class="timestamp">2 hr ago | NAHC.ORG </span> </p>
+							<p><a href="http://www.nahc.org">Home Health Agencies are on the rise </a><br> <span class="timestamp">Sep 20 2pm | NAHC.ORG </span></p>
+							<p><a href="http://www.cnn.com">Home Health Agencies focus on margin </a><br> <span class="timestamp">Sep 2 2pm | CNN.COM </span></p>
+						</article>
+					</div>
+				</div>
+      </div>
+			
+			<footer>
+				<nav>
+					<ul>
+						<li>
+							<a href="#">Why Adeptize</a>
+						</li>
+						<li>
+							<a href="#" title="">About Adeptize</a>
+						</li>
+						<li>
+							<a href="#" title="">Contact Us</a>
+						</li>
+						<li>
+							<a href="#" title="">HHA Blog</a>
+						</li>
+						<li>
+							<a href="#" title="">Feedback</a>
+						</li>
+						<li>
+							<a href="#" title="">Help File</a>
+						</li>
+					</ul>
+				</nav>
+			</footer>
+		</div>
+		
+		<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js" charset="utf-8"></script>
+		<script type="text/javascript" src="floating-menu.js" charset="utf-8"></script>
+		<script type="text/javascript" src="zebra-table.js" charset="utf-8"></script>
+
+  </body>
+</html>
