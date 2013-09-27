@@ -209,7 +209,7 @@ a:active, a:hover, a:focus{
 	/*most of the latest browsers*/
 	border-radius: 5px;
   
-	line-height: 50px;
+	/* line-height: 50px; */
 	text-align: center;
 	margin: 0 auto;
 	padding: 0;
@@ -252,7 +252,7 @@ a:active, a:hover, a:focus{
 
 #menu.default {
 	width: 920px;
-	height: 50px;
+	height: 45px;
 
 	/*older Chrome and Safari*/
 	-webkit-box-shadow: 0 5px 20px #888;
@@ -264,12 +264,14 @@ a:active, a:hover, a:focus{
 
 #menu.fixed {
 	position: fixed;
-	top: -10px;
+	top: 0px;
 	left: 0;
 	min-width: 920px;
 	width: 100%;
-	height: 60px;
-
+	height: 45px;
+	/* margin: 0 auto; */
+	/* padding: 0; */
+	
 	/*older Chrome and Safari*/
 	-webkit-box-shadow: 0 0 40px #222;
 	/*older Firefox*/
@@ -278,13 +280,16 @@ a:active, a:hover, a:focus{
 	box-shadow: 0 0 40px #222;
 }
 
-
 /**** HEADER ****/
 header h1{
 	width:960px;/*width of the image being used*/
 	height:200px;/*height of the image*/
 	text-indent:-9999px; /*removes the text off the page*/
 	background:url(header.jpg) no-repeat; /*replace the text with an image*/
+/* 	border-radius: 10px;
+	-moz-border-radius: 10px;
+	-webkit-border-radius: 10px;
+	background: url('header.jpg'); */
 }
 header a#home{/*make logo a link*/
 	display:block;
@@ -374,80 +379,85 @@ img.printit{
 	CSS Tricks also has a nice writeup: http://css-tricks.com/feature-table-design/
 	*/
 	
-	table {
-		border:none;/* 1px solid #d3d3d3; */
-		background:#fefefe;
-		float:left;
-		width:100%;
-		margin:10px 0px;/* top/bottom left/right */
-		border-spacing:0px;
-    border-collapse:collapse;
-		-moz-border-radius:10px; /* FF1+ */
-		-webkit-border-radius:10px; /* Saf3-4 */
-		border-radius:10px;
-		-webkit-box-shadow: rgba(93, 100, 106, .45) 0 0 5px;
-		-moz-box-shadow: rgba(93, 100, 106, .45) 0 0 5px;
-		box-shadow: rgba(93, 100, 106, .45) 0 0 5px;
-	}
+table {
+	border:none;/* 1px solid #d3d3d3; */
+	background:#fefefe;
+	float:left;
+	width:100%;
+	margin:10px 0px;/* top/bottom left/right */
+	border-spacing:0px;
+	border-collapse:collapse;
+	-moz-border-radius:10px; /* FF1+ */
+	-webkit-border-radius:10px; /* Saf3-4 */
+	border-radius:10px;
+	-webkit-box-shadow: rgba(93, 100, 106, .45) 0 0 5px;
+	-moz-box-shadow: rgba(93, 100, 106, .45) 0 0 5px;
+	box-shadow: rgba(93, 100, 106, .45) 0 0 5px;
+}
 
-	
-	th, td {padding:8px 18px 8px; text-align:center; }
-	
-	th {color:#1c52a2;padding-top:10px; text-shadow: 1px 1px 1px #fff; background:#e8eaeb;}
-	
-	td {border-top:1px solid #e0e0e0; border-right:1px solid #e0e0e0;}
-	
-	tr.odd-row td {background:#f6f6f6;}
-	
-	td.first, th.first {text-align:left}
-	
-	td.last {border-right:none;}
-	
-	/*
-	Background gradients are completely unnecessary but a neat effect.
-	*/
-	
-	td {
-		background: -moz-linear-gradient(100% 25% 90deg, #fefefe, #f9f9f9);
-		background: -webkit-gradient(linear, 0% 0%, 0% 25%, from(#fefefe), to(#f9f9f9));
-	}
-	
-	tr.odd-row td {
-		background: -moz-linear-gradient(100% 25% 90deg, #f6f6f6, #f1f1f1);
-		background: -webkit-gradient(linear, 0% 0%, 0% 25%, from(#f6f6f6), to(#f1f1f1));
-	}
-	
-	th {
-		background: -moz-linear-gradient(100% 20% 90deg, #B6DFF3, #C0E2F2);
-		background: -webkit-gradient(linear, 0% 0%, 0% 20%, from(#B6DFF3), to(#C0E2F2));
-	}
-	
-	/*
-	I know this is annoying, but we need additional styling so webkit will recognize rounded corners on background elements.
-	Nice write up of this issue: http://www.onenaught.com/posts/266/css-inner-elements-breaking-border-radius
-	
-	And, since we've applied the background colors to td/th element because of IE, Gecko browsers also need it.
-	*/
-	
-	tr:first-child th.first {
-		-moz-border-radius-topleft:10px;
-		-webkit-border-top-left-radius:10px; /* Saf3-4 */
-	}
-	
-	tr:first-child th.last {
-		-moz-border-radius-topright:10px;
-		-webkit-border-top-right-radius:10px; /* Saf3-4 */
-	}
-	
-	tr:last-child td.first {
-		-moz-border-radius-bottomleft:10px;
-		-webkit-border-bottom-left-radius:10px; /* Saf3-4 */
-	}
-	
-	tr:last-child td.last {
-		-moz-border-radius-bottomright:10px;
-		-webkit-border-bottom-right-radius:10px; /* Saf3-4 */
-	}
+th, td {padding:8px 18px 8px; text-align:center; }
+
+th {color:#1c52a2;padding-top:10px; text-shadow: 1px 1px 1px #fff; background:#e8eaeb;}
+
+td {border-top:1px solid #e0e0e0; border-right:1px solid #e0e0e0;}
+
+tr.odd-row td {background:#f6f6f6;}
+
+td.first, th.first {text-align:left}
+
+td.last {border-right:none;}
+
+/*
+Background gradients are completely unnecessary but a neat effect.
+*/
+
+td {
+	background: -moz-linear-gradient(100% 25% 90deg, #fefefe, #f9f9f9);
+	background: -webkit-gradient(linear, 0% 0%, 0% 25%, from(#fefefe), to(#f9f9f9));
+}
+
+tr.odd-row td {
+	background: -moz-linear-gradient(100% 25% 90deg, #f6f6f6, #f1f1f1);
+	background: -webkit-gradient(linear, 0% 0%, 0% 25%, from(#f6f6f6), to(#f1f1f1));
+}
+
+th {
+	background: -moz-linear-gradient(100% 20% 90deg, #B6DFF3, #C0E2F2);
+	background: -webkit-gradient(linear, 0% 0%, 0% 20%, from(#B6DFF3), to(#C0E2F2));
+}
+
+/*
+I know this is annoying, but we need additional styling so webkit will recognize rounded corners on background elements.
+Nice write up of this issue: http://www.onenaught.com/posts/266/css-inner-elements-breaking-border-radius
+
+And, since we've applied the background colors to td/th element because of IE, Gecko browsers also need it.
+*/
+
+tr:first-child th.first {
+	-moz-border-radius-topleft:10px;
+	-webkit-border-top-left-radius:10px; /* Saf3-4 */
+}
+
+tr:first-child th.last {
+	-moz-border-radius-topright:10px;
+	-webkit-border-top-right-radius:10px; /* Saf3-4 */
+}
+
+tr:last-child td.first {
+	-moz-border-radius-bottomleft:10px;
+	-webkit-border-bottom-left-radius:10px; /* Saf3-4 */
+}
+
+tr:last-child td.last {
+	-moz-border-radius-bottomright:10px;
+	-webkit-border-bottom-right-radius:10px; /* Saf3-4 */
+}
+
+tr:hover {
+	/* background: -moz-linear-gradient(100% 25% 90deg, #f6f6f6, #f1f1f1);
+	background: -webkit-gradient(linear, 0% 0%, 0% 25%, from(#f6f6f6), to(#f1f1f1)); */
+	background-color: #D2DEE8;
+}
 
 td.critical  {
 	color:#FB0217; 
@@ -536,4 +546,5 @@ footer a:active, footer a:hover, footer a:focus{
 
 /* TODO:
 - convert to individual htm files
+- rounded header image
 */
