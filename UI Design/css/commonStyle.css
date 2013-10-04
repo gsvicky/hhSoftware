@@ -122,12 +122,14 @@ h2.pageheadings{
 h3{
 	font-size:1.5em;
 	margin-left:0px;
-	text-shadow:1px 1px 1px #fff;/* 0px 1px 0px #8D9499; */
+	text-shadow:0 1px 3px #8D9499;/* 1px 1px 1px #fff; */
+	padding: 0 0 5px 0;	
 }
 h4{
 	font-size:1.2em;
 	margin:40px 0 10px -10px;
 	text-shadow:1px 1px 1px #fff;
+	padding: 0 0 5px 0;
 }
 /* Links */
 a:link{
@@ -195,6 +197,8 @@ a:active, a:hover, a:focus{
 
 	-webkit-transition-property: color, background;
 	-webkit-transition-duration: 0.5s, 0.5s;
+	-moz-transition-property: color, background;
+	-moz-transition-duration: 0.5s, 0.5s;
 }
 
 /* this adds an arrow to every link */
@@ -203,34 +207,29 @@ a:active, a:hover, a:focus{
 #menu > ul > li > a:only-child:after { content: ''; } 
 	
 #menu ul li ul{
-    position: absolute;
-		left: 0;
- 
-    visibility:hidden; 
-    background: #01458e;
- 
-    -webkit-border-radius: 0 5px 5px 5px;
-    -moz-border-radius: 0 5px 5px 5px;
-    border-radius: 0 5px 5px 5px;
- 
-    -webkit-transition: opacity .25s ease .1s;
-    -moz-transition: opacity .25s ease .1s;
-    -o-transition: opacity .25s ease .1s;
-    -ms-transition: opacity .25s ease .1s;
-    transition: opacity .25s ease .1s;
+	position: absolute;
+	left: 0;
+
+	visibility:hidden; 
+	background: #01458e;
+
+	-webkit-border-radius: 0 5px 5px 5px;
+	-moz-border-radius: 0 5px 5px 5px;
+	border-radius: 0 5px 5px 5px;
 }
  
 #menu ul li ul li {
-    /* height: 0; */
-    /* overflow: hidden; */
-    /* padding: 0; */
-		display: block;
-		
-    -webkit-transition: width .5s height .5s ease .1s;
-    -moz-transition: width .5s height .5s ease .1s;
-    -o-transition: width .5s height .5s ease .1s;
-    -ms-transition: width .5s height .5s ease .1s;
-    transition: width .5s height .5s ease .1s;
+	display: block;
+
+	opacity: 0;
+	height: 0;
+	width: 0;
+	
+	-webkit-transition: opacity .1s  ease-out, width .1s  ease-out, height .1s ease-out;
+	-moz-transition: opacity .1s  ease-out, width .1s  ease-out, height .1s ease-out;
+	-o-transition: opacity .1s  ease-out, width .1s  ease-out, height .1s ease-out;
+	-ms-transition: opacity .1s  ease-out, width .1s  ease-out, height .1s ease-out;
+	transition: opacity .1s  ease-out, width .1s  ease-out, height .1s ease-out;
 }
  
 #menu ul li ul li a { 
@@ -248,9 +247,6 @@ a:active, a:hover, a:focus{
 	-webkit-border-radius: 5px;
 	-moz-border-radius: 5px;
 	border-radius: 5px;
-
-	-webkit-transition-property: color, background;
-	-webkit-transition-duration: 0.5s, 0.5s;
 }
 
 #menu ul li:hover > a{
@@ -262,9 +258,10 @@ a:active, a:hover, a:focus{
 }
 
 #menu ul li:hover > ul li {
-    height: 36px;
     overflow: visible;
-    padding: 0;
+		opacity: 1;
+    height: 36px;
+		width: 150px; /* TODO: Need to make this auto width*/
 }
 
 #menu ul li:hover > ul { visibility:visible; }
@@ -348,51 +345,52 @@ nav#breadcrumbs a:active, nav#breadcrumbs a:hover, nav#breadcrumbs a:focus{
 }
 
 /*Show help text on hover*/
-ul.helptext{
-	list-style-type: none;
- }
-ul.helptext li {
-	display:inline-block; /*places the images in a line*/
-	position: relative; /*allows precise positioning of the popup image when used with position:absolute - see support section */
-	z-index: 0; /*resets the stack order of the list items - we'll increase in step 4. */
-	
-} 
- ul.helptext a{
-		color:#1c52a2;
-		text-decoration:none;
- }  
+.tooltip:link, .tooltip:visited, .tooltip:active, .tooltip:hover, .tooltip:focus  {color: #1C52A2;}
+.tooltipright:link, .tooltipright:visited, .tooltipright:active, .tooltipright:hover, .tooltipright:focus  {color: #1C52A2;}
 
-ul.helptext a span{
-	position: absolute;
-	left: -9999px;  /*moves the span off the page, effectively hiding it from view*/
-	/**Style the frame**/
-	text-decoration:none;
-	padding: 5px; /*size of the frame*/
-	background:#E8EBED; /*colour of the frame*/
-	/*add a drop shadow to the frame*/
-	-webkit-box-shadow: 0 0 3px rgba(0,0,0, .75));
-	-moz-box-shadow: 0 0 3px rgba(0,0,0, .75);
-	box-shadow: 0 0 3px rgba(0,0,0, .75);
-	/*give the corners a curve*/
-	-webkit-border-radius: 8px;
-	-moz-border-radius: 8px;
-	border-radius:8px;
-	/**Style the caption**/
-	font-size:.5em;
-	text-align: left;
-	vertical-align:top;
-	text-shadow:none;
-	height: 40px;
-	margin: 0px;
-}
-
-/***We bring the large helptext back onto the page by reducing left from -9999px to figures below***/ 
-ul.helptext li:hover a span{ 
+.tooltip, .tooltipright {
+	border-bottom: 1px dotted #000000; outline: none;
+	cursor: help; text-decoration: none;
 	position: relative;
-	z-index: 100; /* bring to front */
-	top: -15px; /*the distance from the bottom of the header to the top of the popup*/
-	left: 0px; /*distance from the left of the header to the left of the popup */ 
 }
+.tooltip span, .tooltipright span {
+	line-height:1.5em;
+	font-size:medium;
+	margin-left: -999em;
+	position: absolute;
+	text-shadow: 0 1px 3px #8D9499;
+}
+.tooltip:hover span {
+	border-radius: 5px 5px; -moz-border-radius: 5px; -webkit-border-radius: 5px; 
+	box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.1); -webkit-box-shadow: 5px 5px rgba(0, 0, 0, 0.1); -moz-box-shadow: 5px 5px rgba(0, 0, 0, 0.1);
+	position: absolute; top: 0em; z-index: 99;
+	margin-left: 0; width: 500px;
+	left: 4em; 
+}
+
+.tooltipright:hover span {
+	border-radius: 5px 5px; 
+	-moz-border-radius: 5px; -webkit-border-radius: 5px; 
+	box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.1); -webkit-box-shadow: 5px 5px rgba(0, 0, 0, 0.1); -moz-box-shadow: 5px 5px rgba(0, 0, 0, 0.1);
+	position: absolute; top: 0em; z-index: 99;
+	margin-left: 0; width: 500px;
+	right: 4em; 
+}
+.tooltip:hover img, .tooltipright:hover img {
+	border: 0; margin: -10px 0 0 -55px;
+	float: left; position: absolute;
+	height:48; width:48;
+}
+.tooltip:hover strong, .tooltipright:hover strong {
+	font-size: 1.2em; 
+	display: block; 
+	padding: 0.2em 0 0.6em 0;
+}
+.helptooltip { background: #D6D9EE; border: 1px solid #434975;	}
+.customtooltip { padding: 0.5em 0.8em 0.8em 2em; }
+.criticaltooltip { background: #FFCCAA; border: 1px solid #FF3334;	}
+.infotooltip { background: #9FDAEE; border: 1px solid #2BB0D7;	}
+.warningtooltip { background: #FFFFAA; border: 1px solid #FFAD33; }
 
 img.printit{
 	width: 22px; 
@@ -477,10 +475,9 @@ tr:last-child td.last {
 	-webkit-border-bottom-right-radius:10px; /* Saf3-4 */
 }
 
-tr:hover {
-	/* background: -moz-linear-gradient(100% 25% 90deg, #f6f6f6, #f1f1f1);
-	background: -webkit-gradient(linear, 0% 0%, 0% 25%, from(#f6f6f6), to(#f1f1f1)); */
-	background-color: #D2DEE8;
+tr:hover td{
+	background: -moz-linear-gradient(75% 100% 90deg, #FFFACD, #F3EFCD);
+	background: -webkit-gradient(linear, 0% 75%, 0% 0%, from(#FFFACD), to(#F3EFCD));
 }
 
 td.critical  {
@@ -550,12 +547,12 @@ footer a:link, footer a:visited{
 	color:#344e66;
 	text-decoration:none;
 	margin:0 10px;
-	text-shadow: 0px -1px 0px #637485;
+	text-shadow:0 1px 3px #8D9499;
 }
 footer a:active, footer a:hover, footer a:focus{
 	color:#832436;
 	text-decoration:none;
-	text-shadow: 0px -1px 0px #551f29;
+	text-shadow:0 1px 3px #8D9499;
 }
 
 /* TODO:

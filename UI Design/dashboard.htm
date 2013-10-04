@@ -53,19 +53,30 @@
 				<div id="pageheading">
 					<!--page heading-->
 					<h2 class="pageheadings"> 
-						<ul class="helptext">
-						<li>
-							<a href="#">
-								Dashboard
-								<span>Dashboard shows most current user-specific information.</span>
-							</a>
-						</li>
-						</ul>
+						<a class="tooltip" href="#">
+							Dashboard
+							<span class="customtooltip helptooltip">
+								<img src="resources/Help.png" alt="Help"/>
+								<strong>Dashboard</strong>
+								Dashboard shows most current user-specific information. 
+								<br><em>Click for more info...</em>
+							</span>
+						</a>
 					</h2>
 				</div>
 				<div id="section1">
 					<div id="section1heading">     
-						<h3>My Tasks </h3>
+						<h3>
+							<a class="tooltip" href="#">
+								My Tasks 
+								<span class="customtooltip helptooltip">
+									<img src="resources/Help.png" alt="Help"/>
+									<strong>My Tasks</strong>
+									My Tasks section list all the current user-specific task information in the correct priority order. 
+									<br><em>Click for more info...</em>
+								</span>
+							</a>
+						</h3>
 						<span class="summaryprefix">Summary:</span>,
 						<span class="summarynormal">8 Total</span>,
 						<span class="summarywarning">2 High</span>,
@@ -87,7 +98,17 @@
 					<div id="section1content2">     
 						<!--CUTOUT BOX-->
 						<div class="cutoutright">
-							<h3>My Profile</h3>
+							<h3>
+								<a class="tooltipright" href="#">
+									My Profile 
+									<span class="customtooltip helptooltip">
+										<img src="resources/Help.png" alt="Help"/>
+										<strong>My Profile</strong>
+										My Profile section lists the most useful performance metrics 
+										<br><em>Click for more info...</em>
+									</span>
+								</a>
+							</h3>
 							<p>Paperwork Timeliness: <span class="normal">90%</span> </p>
 							<p>Patient Feedback: <span class="normal">98% </span></p>
 							<p>Office Staff Feedback: <span class="warning">52%</span> </p>
@@ -98,7 +119,17 @@
 
 				<div id="section2">
 					<div id="section2heading">     
-						<h3>My Schedule </h3>
+						<h3>
+							<a class="tooltip" href="#">
+								My Schedule 
+								<span class="customtooltip helptooltip">
+									<img src="resources/Help.png" alt="Help"/>
+									<strong>My Schedule</strong>
+									My Schedule section lists all the current user-specific schedule information in the correct date order. 
+									<br><em>Click for more info...</em>
+								</span>
+							</a>
+						</h3>
 						<span class="summaryprefix">Summary:</span>
 						<span class="summarynormal">8 This Week</span>,
 						<span class="summarywarning">2 Today</span>
@@ -120,7 +151,17 @@
 				
 				<div id="section3">
 					<div id="section3heading">     
-						<h3>Notifications</h3>
+						<h3>
+							<a class="tooltip" href="#">
+								Notifications 
+								<span class="customtooltip helptooltip">
+									<img src="resources/Help.png" alt="Help"/>
+									<strong>Notifications</strong>
+									Notifications section lists all the current notification information in the received order. 
+									<br><em>Click for more info...</em>
+								</span>
+							</a>
+						</h3>
 						<span class="summaryprefix">Summary:</span>,
 						<span class="summarynormal">8 Total</span>,
 						<span class="summarywarning">2 Today</span>
@@ -138,7 +179,17 @@
 
 					<div id="section3content2">     
 						<div class="cutoutright">
-							<h3>News Feeds</h3>
+							<h3>
+								<a class="tooltipright" href="#">
+									News Feeds 
+									<span class="customtooltip helptooltip">
+										<img src="resources/Help.png" alt="Help"/>
+										<strong>News Feeds</strong>
+										News Feeds section lists the most relevant new information from around the world. 
+										<br><em>Click for more info...</em>
+									</span>
+								</a>
+							</h3>
 							<p><a href="http://www.nahc.org">CMS ordering face to face implementation by 6/9/13 </a><br> <span class="timestamp">2 hr ago | NAHC.ORG </span> </p>
 							<p><a href="http://www.nahc.org">Home Health Agencies are on the rise </a><br> <span class="timestamp">Sep 20 2pm | NAHC.ORG </span></p>
 							<p><a href="http://www.cnn.com">Home Health Agencies focus on margin </a><br> <span class="timestamp">Sep 2 2pm | CNN.COM </span></p>
@@ -182,6 +233,7 @@
 		<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js" charset="utf-8"></script>
 		<script type="text/javascript" src="js/floating-menu.js" charset="utf-8"></script>
 		<script type="text/javascript" src="js/zebra-table.js" charset="utf-8"></script>
+		<script type="text/javascript" src="js/tooltip-link.js" charset="utf-8"></script>
 
   </body>
 </html>
