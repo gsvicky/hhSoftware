@@ -2,52 +2,30 @@
 <html lang="en">
   <head>
     <meta charset="utf-8" />
-    <!-- <meta http-equiv="refresh" content="5"> -->
+    <meta http-equiv="refresh" content="5">
   	<title>Dashboard</title>
     <meta name="description" content="Main dashboard that is shown after user logs in" />
     <meta name="keywords" content="dashboard, adeptize, home health" />
-    <!--STYLESHEETS-->
-    <link rel="stylesheet" href="css/commonStyle.css" type="text/css" media="screen" />
-    <link rel="stylesheet" href="css/dashboardStyle.css" type="text/css" media="screen" />
-    <link rel="stylesheet" href="css/print.css" type="text/css" media="print" />
 
-    <!--GOOGLE WEB FONTS USED IN THIS TEMPLATE - http://www.google.com/webfonts-->
-    <link href='http://fonts.googleapis.com/css?family=Happy+Monkey' rel='stylesheet' type='text/css' />
+    <!--STYLESHEETS-->
+    <link rel="stylesheet" href="css/dashboardStyle.css" type="text/css" media="screen" />
+
+    <!--SCRIPTS-->
+		<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js" charset="utf-8"></script>
+		<script type="text/javascript" src="js/include-commons.js" charset="utf-8"></script>
   </head>
   <body>
     <div id="wrapper">
-			<header>
-				<div class="headerimage">
-          <a id="home" href="/" title="Adeptize">Dashboard</a>
-        </div>
-      </header>
-			<div id="menu" class="default">
-				<ul>
-					<li><a href="#">Dashboard</a></li>
-					<li><a href="#">Patients</a></li>
-					<li><a href="#">Physicians</a></li>
-					<li><a href="#">Schedule</a></li>
-					<li><a href="#">Billing</a></li>
-					<li><a href="#">Reports</a></li>
-					<li><a href="#">Favorites</a></li>
-					<li><a href="#">Help</a>
-						<ul class="helpsubmenu">
-							<li><a href="#">User Guide</a></li>
-							<li><a href="#">FAQ</a></li>
-							<li><a href="#">Support Tickets</a></li>
-						</ul>
-					</li>
-					<li><a href="#">Logout</a></li>
-				</ul>
-			</div>
+			<header id="headerbar"></header>
+			<div id="menu" class="default"></div>
 	  
-      <!--BREADCRUMB NAVIGATION to show visitors their location within the site-->
+      <!--BREADCRUMB NAVIGATION-->
       <nav id="breadcrumbs">
         <p>
           <a href="/">Login</a> &gt; <a href="#">Dashboard</a> 
 				</p>
       </nav>
-      <!--END BREADCRUMBS-->
+
       <!--MAIN CONTENT-->
       <div id="content">
 				<div id="pageheading">
@@ -198,42 +176,7 @@
 				</div>
       </div>
 			
-			<footer>
-				<nav>
-					<ul>
-						<li>
-							<a href="#">Why Adeptize</a>
-						</li>
-						<li>
-							<a href="#" title="">HHA Blog</a>
-						</li>
-						<li>
-							<a href="#" title="">Provide Feedback</a>
-						</li>
-						<li>
-							<a href="#" title="">Contact Us</a>
-						</li>
-						<li>
-							<a href="#" title="">About Adeptize</a>
-						</li>
-						<li>
-							<a href="#" title="">Our Team</a>
-						</li>
-						<li>
-							<a href="#" title="">Online Help</a>
-						</li>
-						<li>
-							<a href="#" title="">Follow Us</a>
-						</li>
-					</ul>
-				</nav>
-			</footer>
+			<footer id="footersection"></footer>
 		</div>
-		
-		<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js" charset="utf-8"></script>
-		<script type="text/javascript" src="js/floating-menu.js" charset="utf-8"></script>
-		<script type="text/javascript" src="js/zebra-table.js" charset="utf-8"></script>
-		<script type="text/javascript" src="js/tooltip-link.js" charset="utf-8"></script>
-
   </body>
 </html>
