@@ -4,7 +4,7 @@ $('head').append( $('<link rel="stylesheet" type="text/css" media="screen" />')
 $('head').append( $('<link rel="stylesheet" type="text/css" media="print" />')
 	.attr('href', 'css/print.css') );
 
-// Common Scripts
+// // Common Scripts
 $('head').append( $('<script type="text/javascript" charset="utf-8" />')
 	.attr('src', 'js/floating-menu.js') );
 $('head').append( $('<script type="text/javascript" charset="utf-8" />')

@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="refresh" content="5">
+  	<title>Patient Center</title>
+    <meta name="description" content="Patient Center provides easy access to all patient related information" />
+    <meta name="keywords" content="patient penter, adeptize, home health" />
+
+    <!--SCRIPTS-->
+		<!-- <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js" charset="utf-8"></script> -->
+		<script src="http://code.jquery.com/jquery-1.9.1.js"></script>
+		<!-- <script src="http://code.jquery.com/ui/1.10.3/jquery-ui.js"></script> -->
+		<script type="text/javascript" src="js/include-commons.js" charset="utf-8"></script>
+		<script type="text/javascript" src="js/patient-center.js" charset="utf-8"></script>
+
+    <!--STYLESHEETS-->
+		<!-- <link rel="stylesheet" href="http://code.jquery.com/ui/1.10.3/themes/smoothness/jquery-ui.css" /> -->
+
+  </head>
+  <body>
+    <div id="wrapper">
+			<header id="headerbar"></header>
+			<div id="menu" class="default"></div>
+	  
+      <!--BREADCRUMB NAVIGATION-->
+      <nav id="breadcrumbs">
+        <p>
+          <a href="/">Login</a> &gt; <a href="#">Patient-Center</a> 
+				</p>
+      </nav>
+
+      <!--MAIN CONTENT-->
+      <div id="content">
+				<div id="pageheading">
+					<!--page heading-->
+					<h2 class="pageheadings"> 
+						<a class="tooltip" href="#">
+							Patient Center
+							<span class="customtooltip helptooltip">
+								<img src="resources/Help.png" alt="Help"/>
+								<strong>Patient Center</strong>
+								Patient Center provides easy access to all patient related information. 
+								<br><em>Click for more info...</em>
+							</span>
+						</a>
+					</h2>
+				</div>
+				<div id="section1">
+					<div id="section1content1">
+						<div id="section1content1a">  
+							<div class="cutout">
+								<div id="patientPic" class="cutout"></div>
+								<div id="patientdemographic"> 
+									<p><span class="emphasize">Doe, Jane</span></p>
+									<p>
+										12345 First Street <br>
+										Los Angeles, CA 90210 <a href="#">Map</a> <br>
+										<span class="bold">Home:</span> <a href="#">(213)123-4567</a> <br>
+										<span class="bold">DOB:</span> 1/1/1920 <br>
+										<span class="bold">Age:</span> 93
+									</p>
+								</div>
+								<div id="warningicon"></div>
+								<div id="warningtext">	Drug Interaction Warning</div>
+								<div id="patientinfo"> 
+									<span class="bold">Diagnosis:</span> 
+									<a href="#">Congestive Heart Failure</a>, 
+									<a href="#">Hypertension</a>,
+									<a href="#">Prostate Cancer</a> <br>
+									<span class="bold">Allergies:</span> Shellfish, Iodine, Sulfa, Penicillin<br>
+									<span class="bold">Precautions:</span> Fall Risk, Immunosuppressed, Risk for Hospitalization, Risk for Pressure Ulcers<br>
+									<span class="bold">Primary Insurance:</span> Medicare<br>
+									<span class="bold">Secondary Insurance:</span> None 
+								</div>						
+							</div>						
+						</div>
+						<div id="section1content1b" class="cutout">
+							<h3>
+								<a class="tooltip" href="#">
+									Phonebook 
+									<span class="customtooltip helptooltip">
+										<img src="resources/Help.png" alt="Help"/>
+										<strong>Phonebook</strong>
+										Phonebook for this patient. 
+										<br><em>Click for more info...</em>
+									</span>
+								</a>
+							</h3>
+							<div id="Phonebook"> 
+								Dr. Annenberg Office: <a href="#">(818)123-4567</a> Fax: <a href="#">(818)123-4567</a><br>
+								Doe, Jan (Daughter) <a href="#">(818)123-4567</a><br>
+								Florence Nightingale, RN <a href="#">(818)123-4567</a><br>
+								William Smith, PT <a href="#">(818)123-4567</a><br>
+								Mary Jones, MSW <a href="#">(818)123-4567</a><br>
+							</div>
+						</div>
+					</div>
+					<div id="section1content2">  
+						<div id="section1content2a" class="cutout">  
+							<h3>
+								<a class="tooltipright" href="#">
+									Communication Notes 
+									<span class="customtooltip helptooltip">
+										<img src="resources/Help.png" alt="Help"/>
+										<strong>Communication Notes</strong>
+										Communication Notes shows all the relevant communications about this patient. 
+										<br><em>Click for more info...</em>
+									</span>
+								</a>
+							</h3>
+							<div id="Communications"> 
+								<span class="bold">June 11, 2013</span><br>
+								<span class="timestamp">Florence Nightingale, RN 10:15am</span><br>
+								Spoke with MD, requested for patient to come into office today for MRI
+								<br>
+								<br>
+								<span class="timestamp">Mary Jones, MSW 10:20am</span><br>
+								Spoke with RN, patient is refusing MSW visit for today due to MD appointment. Rescheduled for tomorrow 6/12/13
+								<br>
+								<br>
+								<span class="bold">May 23, 2013</span><br>
+								<span class="timestamp">Florence Nightingale, RN 11:25am</span><br>
+								Patient’s wife called, patient was hospitalized for UTI. Sent to Kaiser, Woodland Hills.
+								<br>
+								<br>
+								<span class="bold">May 20, 2013</span><br>
+								<span class="timestamp">Florence Nightingale, RN 11:25am</span><br>
+								Patient’s wife called, patient was hospitalized for UTI.
+							</div>
+							<input id="CommNotesText" type="text" name="message" />
+							<button class="submit" type="submit">Send</button>
+						</div>
+					</div>
+				</div>
+				<div id="section2">
+					<div id="section2heading">     
+						<h3>
+							<a class="tooltip" href="#">
+								Timeline 
+								<span class="customtooltip helptooltip">
+									<img src="resources/Help.png" alt="Help"/>
+									<strong>Timeline</strong>
+									Timeline shows the timeline. 
+									<br><em>Click for more info...</em>
+								</span>
+							</a>
+						</h3>
+					</div>
+					<br>
+					<div id="section2content1">
+						<input id="timeline" type="range" step="2" max="100" min="0" value="0">
+						<div id="slidertimeline"> </div>
+						<ul id="times"> 
+							<li>01/01</li>
+							<li>01/15</li>
+							<li>01/29</li>
+							<li>02/12</li>
+							<li>02/26</li>
+						</ul>		
+						<div id="hospitalized" class="hovering"> 
+							<a class="tooltip" href="#">
+								&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+								<span class="customtooltip infotooltip">
+									<img src="resources/info.png" alt="Info"/>
+									<strong>Hospitalized</strong>
+									<span class="bold">From:</span> Jan 1, 2013 <br>
+									<span class="bold">To:</span> Jan 1, 2013 <br>
+								</span>
+							</a>
+						</div>
+						<div id="visit1" class="hovering"> 
+							<a class="tooltip" href="#">
+								&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+								<span class="customtooltip infotooltip">
+									<img src="resources/info.png" alt="Info"/>
+									<strong>Nurse Visit</strong>
+									<span class="bold">On:</span> Jan 8, 2013 <br>
+								</span>
+							</a>
+						</div>
+						<div id="visit2" class="selected"> 
+							<a class="tooltip" href="#">
+								&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+								<span class="customtooltip infotooltip">
+									<img src="resources/info.png" alt="Info"/>
+									<strong>Nurse Visit</strong>
+									<span class="bold">On:</span> Jan 25, 2013 <br>
+								</span>
+							</a>
+						</div>
+						<div id="today"> 
+							<a class="tooltip" href="#">
+								&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+								<span class="customtooltip infotooltip">
+									<img src="resources/info.png" alt="Info"/>
+									<strong>Today</strong>
+								</span>
+							</a>
+						</div>
+						<div id="lab" class="hovering"> 
+							<a class="tooltip" href="#">
+								&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+								<span class="customtooltip infotooltip">
+									<img src="resources/info.png" alt="Info"/>
+									<strong>Lab Test</strong>
+									<span class="bold">On:</span> Feb 10, 2013 <br>
+								</span>
+							</a>
+						</div>
+						<div id="visit3" class="hovering"> 
+							<a class="tooltipright" href="#">
+								&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+								<span class="customtooltip infotooltip">
+									<img src="resources/info.png" alt="Info"/>
+									<strong>Nurse Visit</strong>
+									<span class="bold">On:</span> Feb 18, 2013 <br>
+								</span>
+							</a>
+						</div>
+					</div>
+				</div>
+
+				<div id="section3">
+					<div id="section3heading">     
+						<h3>
+							<a class="tooltip" href="#">
+								Documents 
+								<span class="customtooltip helptooltip">
+									<img src="resources/Help.png" alt="Help"/>
+									<strong>Documents</strong>
+									Documents section lists all relevant documents for the selected event. 
+									<br><em>Click for more info...</em>
+								</span>
+							</a>
+						</h3>
+						<span class="summaryprefix">Nurse Visit on Jan 25 - Summary:</span>
+						<span class="summarynormal">5 Total</span>,
+						<span class="summarywarning">1 High</span>,
+						<span class="summarycritical">1 Past Due</span>
+					</div>
+
+					<div id="section3content">     
+						<div id="section3content1">     
+							<button class="submit right" type="submit">Add Photo</button>				
+							<button class="submit right" type="submit">Attach Document</button>							
+							<button class="submit right" type="submit">Add Supplies</button>	
+							<button class="submit right" type="submit">Send Fax</button>	
+							<br>							
+							<br>							
+							<table id="artefacts">
+								<tr><th>Form</th><th>Staff</th><th>Title</th><th>Due Date</th><th>Completion Date</th><th>Status</th><th>Select</th></tr>
+								<tr><td><a href="#">485 POC</a></td><td><a href="#">Mary Jones</a></td><td>Nurse</td><td class="critical">Jan 29</td><td>-</td><td>Not Started</td><td><input type="checkbox" title="Click to select"></td></tr>
+								<tr><td><a href="#">OASIS-C Report</a></td><td><a href="#">Kate Jones</a></td><td>PT</td><td class="highpriority">Today</td><td>-</td><td>In Progress</td><td><input type="checkbox" title="Click to select"></td></tr>
+								<tr><td><a href="#">485 POC</a></td><td><a href="#">Ram Hasting</a></td><td>QA</td><td>Today</td><td>-</td><td>In Review</td><td><input type="checkbox" title="Click to select"></td></tr>
+								<tr><td><a href="#">485 POC</a></td><td><a href="#">Lisa Ray</a></td><td>RNO</td><td>-</td><td>Jan 21</td><td>Completed</td><td><input type="checkbox" title="Click to select"></td></tr>
+								<tr><td><a href="#">OASIS-C Report</a></td><td><a href="#">Mona Wills</a></td><td>Nurse</td><td>-</td><td>Jan 26</td><td>Completed</td><td><input type="checkbox" title="Click to select"></td></tr>
+							</table>
+						</div>
+					</div>
+				</div>
+				
+				<div id="patientlist">
+					<div id="patientlisting">
+						<h3>
+							<a class="tooltip" href="#">
+								My Patients 
+								<span class="customtooltip helptooltip">
+									<img src="resources/Help.png" alt="Help"/>
+									<strong>My Patients</strong>
+									My Patients all your patients. 
+									<br><em>Click for more info...</em>
+								</span>
+							</a>
+						</h3>
+						<ul> 
+							<li>Davis, Jane</li>
+							<li>Davis, John</li>
+							<li>Doe, Jane</li>
+							<li>Doe, John</li>
+							<li>Jones, Jane</li>
+							<li>Jones, John</li>
+							<li>Lee, Jane</li>
+							<li>Lee, John</li>
+							<li>Smith, Jane</li>
+							<li>Smith, John</li>
+						</ul> 
+					</div>
+					<div id="patientListBtn">
+						Patients List ▼
+					</div>
+				</div>
+      </div>
+			
+			<footer id="footersection"></footer>
+		</div>
+  </body>
+</html>

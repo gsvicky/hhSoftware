@@ -1,0 +1,264 @@
+/* Page layout*/
+
+#pageheading{
+	width:100%;
+}
+#section1{
+	width:100%;
+}
+#section1content1{
+	width:50%;
+	float:left;
+	padding: 5px 2% 0 0;
+}
+#section1content1b{
+	width:100%;
+	float:left;
+	margin-top:5px;
+}
+#section1content2{
+	width:46%;
+	height:473px; /*473*/
+	padding: 5px 0 0 0;
+}
+#Communications{
+	overflow-y:scroll;
+	overflow-x:hidden;
+	clear:both;
+	width:auto;
+	height:200px;
+}
+.cutout{
+	padding: 7px;
+	position:relative;
+}
+.cutout input{
+	margin:7px 0 7px 15px;
+}
+/*Define overrides for the cutout */
+#patientdemographic{
+	margin:7px 0 7px 0;
+}
+#patientPic{
+	margin:7px 0 7px 15px;
+	width:30%;
+	float:left;
+}
+#patientdemographic{
+	width:55%;
+	float:left;
+}
+#warningicon{
+	/* float:right; Use Float OR Absolute and not both*/
+	width:10%;
+	position: absolute;
+	right:35px;
+}
+#warningtext{
+	/* float:right; */
+	width:10%;
+	position: absolute;
+	right:0px;
+	top:35px;
+	text-align: center;
+}
+#patientinfo{
+	width:100%;
+}
+
+#section2{
+	padding:20px 0 0 0;
+	width:100%; 
+}
+#section2heading{
+	width:100%;
+}
+#section2content1{
+	width:100%;
+	padding: 5px 0 0 0;
+	position:relative;
+}
+#section3{
+	padding:20px 0 0 0;
+	width:100%;
+}
+#section3heading{
+	width:100%;
+}
+#section3content{
+	width:100%;
+	position: relative; 
+}
+#section3content1{
+	width:100%;
+	float:left;
+	padding: 5px 2% 0 0;
+}
+
+#patientlist{
+	line-height:2em;
+	font-size:medium;
+	/* margin-left: 0em;/* -999em; */ 
+	position: absolute;
+	text-shadow: 0 1px 3px #8D9499;
+	background: -moz-linear-gradient(top, #BFE0EE, #BFE0EE, #BFE0EE);
+	border-radius: 5px 5px; -moz-border-radius: 5px; -webkit-border-radius: 5px; 
+	box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.1); -webkit-box-shadow: 5px 5px rgba(0, 0, 0, 0.1); -moz-box-shadow: 5px 5px rgba(0, 0, 0, 0.1);
+	padding: 20px;
+	z-index: 99;	
+	position: fixed;
+	left: -179px; /*-999px; 0px; */
+	top:250px;
+	width: auto;
+	transition: left .75s;
+	-webkit-transition: left .75s;
+}
+#patientlisting > ul > li{
+	color:#0F205C;
+	list-style-type: none;
+}
+#patientlisting > ul > li:hover{
+	background:#CFCFCF;
+}
+#patientListBtn{
+	background: -moz-linear-gradient(top, #BFE0EE, #BFE0EE, #BFE0EE);
+	color: #0F205C;
+	display: block;
+	width: auto;
+	height: 30px;
+	padding: 15px 10px 5px 10px;
+	font-weight: bold;
+	position: fixed;
+	left:  -60px;
+	top:400px;
+	border-radius: 5px 5px; -moz-border-radius: 5px; -webkit-border-radius: 5px; 
+	box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.1); -webkit-box-shadow: 2px 2px rgba(0, 0, 0, 0.1); -moz-box-shadow: 2px 2px rgba(0, 0, 0, 0.1);
+	transform: rotate(-90deg);
+	transition: left .75s;
+	-webkit-transition: left .75s;
+}
+#patientListBtn:hover  {
+	text-decoration: none;
+	cursor: pointer;
+}
+
+#patientPic{
+	width:100px;
+	height:100px;
+	border-radius: 10px;
+	-moz-border-radius: 10px;
+	-webkit-border-radius: 10px;
+	background: url(../resources/patient1.png) no-repeat;
+	background-size:100% 100%;
+}
+#warningicon{
+	width:30px;
+	height:30px;
+	margin: 0;
+	background: url(../resources/warning.png) no-repeat;
+	background-size:100% 100%;
+}
+
+#CommNotesText{
+	width:65%;
+}
+#timeline{
+	width: 98%; 
+	margin: 15px 0;
+}
+#slidertimeline{
+	width: 98%; 
+	height:5px;
+	margin: 15px 0;
+	background: url(../resources/sliderTimeline.png) no-repeat;
+	background-size:100% 100%;
+	position:absolute;
+	top:20px;
+	left:8px;
+}
+#times {
+	position:absolute;
+	top:40px;
+	left:0px;
+}
+#times li{
+	list-style-type: none;
+	display: inline;
+	/* float:left; */
+	padding:0 66px 0 69px;
+}
+#hospitalized{
+	width: 30px; 
+	height:30px;
+	background: url(../resources/hospitalized.png) no-repeat;
+	background-size:100% 100%;
+	position:absolute;
+	top:-10px;
+	left:88px;
+}	
+#visit1{
+	width: 30px; 
+	height:30px;
+	background: url(../resources/visit.png) no-repeat;
+	background-size:100% 100%;
+	position:absolute;
+	top:-10px;
+	left:188px;
+}	
+#visit2{
+	width: 30px; 
+	height:30px;
+	background: url(../resources/visit.png) no-repeat;
+	background-size:100% 100%;
+	position:absolute;
+	top:-10px;
+	left:388px;
+}	
+#visit3{
+	width: 30px; 
+	height:30px;
+	background: url(../resources/visit.png) no-repeat;
+	background-size:100% 100%;
+	position:absolute;
+	top:-10px;
+	left:688px;
+}	
+#lab{
+	width: 30px; 
+	height:30px;
+	background: url(../resources/lab.png) no-repeat;
+	background-size:100% 100%;
+	position:absolute;
+	top:-10px;
+	left:588px;
+}	
+#today{
+	width: 10px; 
+	height:10px;
+	background: url(../resources/today.png) no-repeat;
+	background-size:100% 100%;
+	position:absolute;
+	top:38px;
+	left:475px;
+}	
+.hovering{
+	-moz-transition: padding .5s;
+}
+.hovering:hover {
+	padding:5px;
+}
+.selected{
+	box-shadow: 8px 8px 8px rgba(0, 0, 0, 0.1); -webkit-box-shadow: 8px 8px rgba(0, 0, 0, 0.1); -moz-box-shadow: 8px 8px rgba(0, 0, 0, 0.1);
+	border: 3px solid #434975;
+	border-radius: 5px 5px; 
+	padding: 5px;
+}	
+
+
+/* 
+TODO:
+Make cutout height auto 100% 
+Add search box with type ahead for patient panel
+Add scrollbar for communication notes
+Add different timeline types
+*/
