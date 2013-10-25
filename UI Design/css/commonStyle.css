@@ -151,6 +151,10 @@ a:active, a:hover, a:focus{
 	color:#306a7a;
 }
 
+.rightjustify{
+	float:right;
+}
+
 /**** MENU ****/
 #menu {
 
@@ -358,7 +362,7 @@ nav#breadcrumbs a:active, nav#breadcrumbs a:hover, nav#breadcrumbs a:focus{
 
 .tooltip, .tooltipright {
 	border-bottom: 1px dotted #000000; outline: none;
-	cursor: help; text-decoration: none;
+	text-decoration: none;
 	position: relative;
 }
 .tooltip > span, .tooltipright > span {
@@ -394,16 +398,17 @@ nav#breadcrumbs a:active, nav#breadcrumbs a:hover, nav#breadcrumbs a:focus{
 	display: block; 
 	padding: 0.2em 0 0.6em 0;
 }
-.helptooltip { background: #D6D9EE; border: 1px solid #434975;	 width: 500px;}
+.nounderline{border-bottom: none;}
+.helptooltip { cursor: help; background: #D6D9EE; border: 1px solid #434975;	 width: 500px;}
 .customtooltip { padding: 0.5em 0.8em 0.8em 2em; }
 .criticaltooltip { background: #FFCCAA; border: 1px solid #FF3334;	}
-.infotooltip { background: #9FDAEE; border: 1px solid #2BB0D7;	 width: 200px;}
+.infotooltip { cursor: default; background: #9FDAEE; border: 1px solid #2BB0D7;	 width: 200px;}
 .warningtooltip { background: #FFFFAA; border: 1px solid #FFAD33; }
 
 img.printit{
 	width: 22px; 
 	height: 22px;
-	float: right;
+	margin: 0 0 0 10px;	
 }
 	/*
 	Pretty Table Styling
@@ -554,7 +559,49 @@ input[type='range']:focus {
     -moz-appearance: none;  
     box-shadow: 0px 0px 3px #ccc, 0 10px 15px #eee inset;
 } 
+label {
+	display: inline-block;
+	cursor: pointer;
+	position: relative;
+	padding-left: 25px;
+	margin-right: 15px;
+	font-size: 13px;
+}
+input[type=radio] {  
+	display: none;  
+} 
+label:before {
+	content: "";
+	display: inline-block;
 
+	width: 16px;
+	height: 16px;
+
+	margin-right: 10px;
+	position: absolute;
+	left: 0;
+	bottom: 1px;
+	background-color: #aaa;
+	box-shadow: inset 0px 2px 3px 0px rgba(0, 0, 0, .3), 0px 1px 0px 0px rgba(255, 255, 255, .8);
+}
+.radios {
+	margin: auto;	
+	width:100%;
+} 
+.radios label:before {  
+	border-radius: 8px;
+}  		
+input[type=radio]:checked + label:before {  
+	content: "\2022";  
+	color: #ffffff;  
+	font-size: 23px;  
+	text-align: center;  
+	line-height: 14px;  
+}  
+fieldset.radiosCentered {
+  text-align: center;
+	border:none;
+}
 /* Button Style */
 button.submit {
     background-color: #68b12f;
@@ -641,6 +688,7 @@ footer a:active, footer a:hover, footer a:focus{
 	text-decoration:none;
 	text-shadow:0 1px 3px #8D9499;
 }
+
 
 /* 
 TODO:

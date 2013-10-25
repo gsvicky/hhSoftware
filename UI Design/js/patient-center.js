@@ -21,6 +21,17 @@ $(function() {
 		$("#patientlist").css({left:-179});
 	});
 
+	$("div#vitalsView").hide();
+	$("input[name='timelineviews']").change(function() {
+			if ($("input[name='timelineviews']:checked").val() == 'PocView') {
+					$("div#vitalsView").hide();
+					$("div#PocView").show();
+			}
+			else if ($("input[name='timelineviews']:checked").val() == 'vitalsView') {
+					$("div#PocView").hide();
+					$("div#vitalsView").show();
+			}		
+	});
 	
 });
 

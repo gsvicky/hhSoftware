@@ -76,6 +76,13 @@
 #section2content1{
 	width:100%;
 	padding: 5px 0 0 0;
+}
+#PocView{
+	width:100%;
+	position:relative;
+}
+#vitalsView{
+	width:100%;
 	position:relative;
 }
 #section3{
@@ -158,12 +165,35 @@
 	background: url(../resources/warning.png) no-repeat;
 	background-size:100% 100%;
 }
-
+#prev{
+	width:30px;
+	height:30px;
+	margin: 0;
+	background: url(../resources/arrow_back.png) no-repeat;
+	background-size:100% 100%;
+}
+#next{
+	width:30px;
+	height:30px;
+	margin: 0;
+	background: url(../resources/arrow_forward.png) no-repeat;
+	background-size:100% 100%;
+}
 #CommNotesText{
 	width:65%;
 }
 #timeline{
-	width: 98%; 
+	height:90px;
+	border:1px solid #aaa;
+	box-shadow: 0px 0px 3px #ccc, 0 10px 15px #eee inset;
+		
+	/*older Chrome and Safari*/
+	-webkit-border-radius: 5px;
+	/*older Firefox*/
+	-moz-border-radius: 5px;
+	/*most of the latest browsers*/
+	border-radius: 5px;
+	width: 100%; 
 	margin: 15px 0;
 }
 #slidertimeline{
@@ -173,19 +203,18 @@
 	background: url(../resources/sliderTimeline.png) no-repeat;
 	background-size:100% 100%;
 	position:absolute;
-	top:20px;
-	left:8px;
+	top:60px;
+	left:10px;
 }
 #times {
 	position:absolute;
-	top:40px;
-	left:0px;
+	top:85px;
+	left:10px;
 }
 #times li{
 	list-style-type: none;
 	display: inline;
-	/* float:left; */
-	padding:0 66px 0 69px;
+	padding:0 68px 0 65px;
 }
 #hospitalized{
 	width: 30px; 
@@ -193,7 +222,7 @@
 	background: url(../resources/hospitalized.png) no-repeat;
 	background-size:100% 100%;
 	position:absolute;
-	top:-10px;
+	top:35px;
 	left:88px;
 }	
 #visit1{
@@ -202,7 +231,7 @@
 	background: url(../resources/visit.png) no-repeat;
 	background-size:100% 100%;
 	position:absolute;
-	top:-10px;
+	top:35px;
 	left:188px;
 }	
 #visit2{
@@ -211,7 +240,7 @@
 	background: url(../resources/visit.png) no-repeat;
 	background-size:100% 100%;
 	position:absolute;
-	top:-10px;
+	top:30px;
 	left:388px;
 }	
 #visit3{
@@ -220,7 +249,7 @@
 	background: url(../resources/visit.png) no-repeat;
 	background-size:100% 100%;
 	position:absolute;
-	top:-10px;
+	top:35px;
 	left:688px;
 }	
 #lab{
@@ -229,7 +258,7 @@
 	background: url(../resources/lab.png) no-repeat;
 	background-size:100% 100%;
 	position:absolute;
-	top:-10px;
+	top:35px;
 	left:588px;
 }	
 #today{
@@ -238,11 +267,11 @@
 	background: url(../resources/today.png) no-repeat;
 	background-size:100% 100%;
 	position:absolute;
-	top:38px;
-	left:475px;
+	top:78px;
+	left:490px;
 }	
 .hovering{
-	-moz-transition: padding .5s;
+	-moz-transition: padding .25s;
 }
 .hovering:hover {
 	padding:5px;
@@ -254,11 +283,50 @@
 	padding: 5px;
 }	
 
+#vitals1{
+	width: 20px; 
+	height:30px;
+	background: green;
+	position:absolute;
+	bottom:47px;
+	left:88px;
+}
+#vitals2{
+	width: 20px; 
+	height:35px;
+	background: green;
+	position:absolute;
+	bottom:47px;
+	left:188px;
+}
+#vitals3{
+	width: 20px; 
+	height:45px;
+	background: orange;
+	position:absolute;
+	bottom:47px;
+	left:388px;
+}
+#vitals4{
+	width: 20px; 
+	height:55px;
+	background: red;
+	position:absolute;
+	bottom:47px;
+	left:588px;
+}
+#vitals5{
+	width: 20px; 
+	height:35px;
+	background: green;
+	position:absolute;
+	bottom:47px;
+	left:688px;
+}
 
 /* 
 TODO:
 Make cutout height auto 100% 
 Add search box with type ahead for patient panel
 Add scrollbar for communication notes
-Add different timeline types
 */

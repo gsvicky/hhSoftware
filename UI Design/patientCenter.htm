@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="utf-8" />
-    <meta http-equiv="refresh" content="5">
+    <!-- <meta http-equiv="refresh" content="5"> -->
   	<title>Patient Center</title>
     <meta name="description" content="Patient Center provides easy access to all patient related information" />
     <meta name="keywords" content="patient penter, adeptize, home health" />
@@ -147,76 +147,159 @@
 							</a>
 						</h3>
 					</div>
-					<br>
 					<div id="section2content1">
-						<input id="timeline" type="range" step="2" max="100" min="0" value="0">
-						<div id="slidertimeline"> </div>
-						<ul id="times"> 
-							<li>01/01</li>
-							<li>01/15</li>
-							<li>01/29</li>
-							<li>02/12</li>
-							<li>02/26</li>
-						</ul>		
-						<div id="hospitalized" class="hovering"> 
-							<a class="tooltip" href="#">
-								&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-								<span class="customtooltip infotooltip">
-									<img src="resources/info.png" alt="Info"/>
-									<strong>Hospitalized</strong>
-									<span class="bold">From:</span> Jan 1, 2013 <br>
-									<span class="bold">To:</span> Jan 1, 2013 <br>
-								</span>
-							</a>
+						<!-- <div id="prev"></div> -->
+						<!-- <input id="timeline" type="range" step="2" max="100" min="0" value="0"> -->
+						<!-- <div id="next"></div> -->
+						<fieldset class="radiosCentered">
+							<div class="radios">  
+									<input type="radio" id="radio1" name="timelineviews" value="PocView" checked="checked">
+									<label for="radio1">Plan Of Care View</label>
+
+									<input type="radio" id="radio2" name="timelineviews" value="vitalsView">
+									<label for="radio2">Vitals View</label>
+							</div>						
+						</fieldset>
+						<div id="PocView">  
+							<div id="timeline"></div>
+							<div id="slidertimeline"> </div>
+							<ul id="times"> 
+								<li>01/01</li>
+								<li>01/15</li>
+								<li>01/29</li>
+								<li>02/12</li>
+								<li>02/26</li>
+							</ul>	
+							<div id="hospitalized" class="hovering"> 
+								<a class="tooltip nounderline" href="#">
+									&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+									<span class="customtooltip infotooltip">
+										<img src="resources/info.png" alt="Info"/>
+										<strong>Hospitalized</strong>
+										<span class="bold">From:</span> Jan 1, 2013 <br>
+										<span class="bold">To:</span> Jan 1, 2013 <br>
+									</span>
+								</a>
+							</div>
+							<div id="visit1" class="hovering"> 
+								<a class="tooltip nounderline" href="#">
+									&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+									<span class="customtooltip infotooltip">
+										<img src="resources/info.png" alt="Info"/>
+										<strong>Nurse Visit</strong>
+										<span class="bold">On:</span> Jan 8, 2013 <br>
+									</span>
+								</a>
+							</div>
+							<div id="visit2" class="selected"> 
+								<a class="tooltip nounderline" href="#">
+									&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+									<span class="customtooltip infotooltip">
+										<img src="resources/info.png" alt="Info"/>
+										<strong>Nurse Visit</strong>
+										<span class="bold">On:</span> Jan 25, 2013 <br>
+									</span>
+								</a>
+							</div>
+							<div id="today"> 
+								<a class="tooltip nounderline" href="#">
+									&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+									<span class="customtooltip infotooltip">
+										<img src="resources/info.png" alt="Info"/>
+										<strong>Today</strong>
+									</span>
+								</a>
+							</div>
+							<div id="lab" class="hovering"> 
+								<a class="tooltip nounderline" href="#">
+									&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+									<span class="customtooltip infotooltip">
+										<img src="resources/info.png" alt="Info"/>
+										<strong>Lab Test</strong>
+										<span class="bold">On:</span> Feb 10, 2013 <br>
+									</span>
+								</a>
+							</div>
+							<div id="visit3" class="hovering"> 
+								<a class="tooltipright nounderline" href="#">
+									&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+									<span class="customtooltip infotooltip">
+										<img src="resources/info.png" alt="Info"/>
+										<strong>Nurse Visit</strong>
+										<span class="bold">On:</span> Feb 18, 2013 <br>
+									</span>
+								</a>
+							</div>
 						</div>
-						<div id="visit1" class="hovering"> 
-							<a class="tooltip" href="#">
-								&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-								<span class="customtooltip infotooltip">
-									<img src="resources/info.png" alt="Info"/>
-									<strong>Nurse Visit</strong>
-									<span class="bold">On:</span> Jan 8, 2013 <br>
-								</span>
-							</a>
-						</div>
-						<div id="visit2" class="selected"> 
-							<a class="tooltip" href="#">
-								&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-								<span class="customtooltip infotooltip">
-									<img src="resources/info.png" alt="Info"/>
-									<strong>Nurse Visit</strong>
-									<span class="bold">On:</span> Jan 25, 2013 <br>
-								</span>
-							</a>
-						</div>
-						<div id="today"> 
-							<a class="tooltip" href="#">
-								&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-								<span class="customtooltip infotooltip">
-									<img src="resources/info.png" alt="Info"/>
-									<strong>Today</strong>
-								</span>
-							</a>
-						</div>
-						<div id="lab" class="hovering"> 
-							<a class="tooltip" href="#">
-								&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-								<span class="customtooltip infotooltip">
-									<img src="resources/info.png" alt="Info"/>
-									<strong>Lab Test</strong>
-									<span class="bold">On:</span> Feb 10, 2013 <br>
-								</span>
-							</a>
-						</div>
-						<div id="visit3" class="hovering"> 
-							<a class="tooltipright" href="#">
-								&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-								<span class="customtooltip infotooltip">
-									<img src="resources/info.png" alt="Info"/>
-									<strong>Nurse Visit</strong>
-									<span class="bold">On:</span> Feb 18, 2013 <br>
-								</span>
-							</a>
+						<div id="vitalsView">  
+							<div id="timeline"></div>
+							<div id="slidertimeline"> </div>
+							<ul id="times"> 
+								<li>01/01</li>
+								<li>01/15</li>
+								<li>01/29</li>
+								<li>02/12</li>
+								<li>02/26</li>
+							</ul>	
+							<div id="vitals1" class="hovering"> 
+								<a class="tooltip nounderline" href="#">
+									&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+									<span class="customtooltip infotooltip">
+										<img src="resources/info.png" alt="Info"/>
+										<strong>Blood Pressure</strong>
+										<span class="bold">Value:</span> 80/120 <br>
+									</span>
+								</a>
+							</div>
+							<div id="vitals2" class="hovering"> 
+								<a class="tooltip nounderline" href="#">
+									&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+									<span class="customtooltip infotooltip">
+										<img src="resources/info.png" alt="Info"/>
+										<strong>Blood Pressure</strong>
+										<span class="bold">Value:</span> 90/120 <br>
+									</span>
+								</a>
+							</div>
+							<div id="vitals3" class="hovering"> 
+								<a class="tooltip nounderline" href="#">
+									&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+									<span class="customtooltip infotooltip">
+										<img src="resources/info.png" alt="Info"/>
+										<strong>Blood Pressure</strong>
+										<span class="bold">Value:</span> 100/140 <br>
+									</span>
+								</a>
+							</div>
+							<div id="vitals4" class="hovering"> 
+								<a class="tooltip nounderline" href="#">
+									&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+									<span class="customtooltip infotooltip">
+										<img src="resources/info.png" alt="Info"/>
+										<strong>Blood Pressure</strong>
+										<span class="bold">Value:</span> 130/170 <br>
+									</span>
+								</a>
+							</div>
+							<div id="vitals5" class="hovering"> 
+								<a class="tooltip nounderline" href="#">
+									&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+									<span class="customtooltip infotooltip">
+										<img src="resources/info.png" alt="Info"/>
+										<strong>Blood Pressure</strong>
+										<span class="bold">Value:</span> 90/120 <br>
+									</span>
+								</a>
+							</div>
+							<div id="today"> 
+								<a class="tooltip nounderline" href="#">
+									&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+									<span class="customtooltip infotooltip">
+										<img src="resources/info.png" alt="Info"/>
+										<strong>Today</strong>
+									</span>
+								</a>
+							</div>
 						</div>
 					</div>
 				</div>
